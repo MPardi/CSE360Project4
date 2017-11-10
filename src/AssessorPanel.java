@@ -133,8 +133,6 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 		if (lesson = 1 && sectionCount >= 10) {
 				// call Tains dialogue for completion. then something?'
 			sectionCount = 0;
-			question.setText(problemToSolve.functionCombiner());
-			setCorrectPosition(position, problemToSolve);
 
 		} else if (lesson = 1 && sectionCount >= 6) {
 //			System.out.println("final set");
@@ -148,6 +146,10 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 		}
 		//THIS NEEDS TO BE OPTIMIZED
 		//Lesson 2 logic
+		else if (lesson = 2 && sectionCount >= 10) {
+			// call Tains dialogue for completion. then something?'
+			sectionCount = 0;
+		}
 		else if (lesson = 2 && sectionCount >= 6) {
 //			System.out.println("final set");
 			// -- NEW v0.1t added a setAnswer method to set which option is the answer
@@ -159,6 +161,10 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 			setCorrectPosition(position, problemToSolve);
 		}
 		//Lesson 3 Logic
+		else if (lesson = 3 && sectionCount >= 10) {
+			// call Tains dialogue for completion. then something?'
+			sectionCount = 0;
+		}
 		else if (lesson = 3 && sectionCount >= 6) {
 //			System.out.println("final set");
 			// -- NEW v0.1t added a setAnswer method to set which option is the answer
@@ -170,6 +176,10 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 			setCorrectPosition(position, problemToSolve);
 		}
 		//Lesson 4 Logic
+		else if (lesson = 4 && sectionCount >= 10) {
+			// call Tains dialogue for completion. then something?'
+			sectionCount = 0;
+		}
 		else if (lesson = 4 && sectionCount >= 6) {
 //			System.out.println("final set");
 			// -- NEW v0.1t added a setAnswer method to set which option is the answer
@@ -181,6 +191,10 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 			setCorrectPosition(position, problemToSolve);
 		}
 		//Lesson 5 Logic
+		else if (lesson = 5 && sectionCount >= 10) {
+			// call Tains dialogue for completion. then something?'
+			sectionCount = 0;
+		}
 		else if (lesson = 5 && sectionCount >= 6) {
 //			System.out.println("final set");
 			// -- NEW v0.1t added a setAnswer method to set which option is the answer
@@ -192,6 +206,10 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 			setCorrectPosition(position, problemToSolve);
 		}
 		//Lesson 6 Logic
+		else if (lesson = 6 && sectionCount >= 10) {
+			// call Tains dialogue for completion. then something?'
+			sectionCount = 0;
+		}
 		else if (lesson = 6 && sectionCount >= 6) {
 //			System.out.println("final set");
 			// -- NEW v0.1t added a setAnswer method to set which option is the answer
@@ -417,7 +435,8 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 				if (position == 1) {
 					DescriptorPanel.appendText(true);
 					correctCount++;
-					setQuestions(correctCount);
+					sectionCount++;
+					setQuestions(sectionCount);
 					
 					controlCenter.answerCorrect();
 
@@ -426,7 +445,7 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 
 					DescriptorPanel.appendText(false);
 					wrongCount++;
-					setQuestions(correctCount);
+					setQuestions(sectionCount);
 					
 					controlCenter.answerIncorrect();
 					
@@ -437,7 +456,8 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 				if (position == 2) {
 					DescriptorPanel.appendText(true);
 					correctCount++;
-					setQuestions(correctCount);
+					sectionCount++;
+					setQuestions(sectionCount);
 
 					controlCenter.answerCorrect();
 					
@@ -446,7 +466,7 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 				} else {
 					DescriptorPanel.appendText(false);
 					wrongCount++;
-					setQuestions(correctCount);
+					setQuestions(sectionCount);
 					
 					controlCenter.answerIncorrect();
 					
@@ -457,7 +477,8 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 				if (position == 3) {
 					DescriptorPanel.appendText(true);
 					correctCount++;
-					setQuestions(correctCount);
+					sectionCount++;
+					setQuestions(sectionCount);
 					
 					controlCenter.answerCorrect();
 					
@@ -466,7 +487,7 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 				} else {
 					DescriptorPanel.appendText(false);
 					wrongCount++;
-					setQuestions(correctCount);
+					setQuestions(sectionCount);
 
 					controlCenter.answerIncorrect();
 					
@@ -477,8 +498,8 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 				if (position == 4) {
 					DescriptorPanel.appendText(true);
 					correctCount++;
-
-					setQuestions(correctCount);
+					sectionCount++;
+					setQuestions(sectionCount);
 					
 					controlCenter.answerCorrect();
 					
@@ -487,7 +508,7 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 				} else {
 					DescriptorPanel.appendText(false);
 					wrongCount++;
-					setQuestions(correctCount);
+					setQuestions(sectionCount);
 					
 					controlCenter.answerIncorrect();
 					
