@@ -150,14 +150,10 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 			// call Tains dialogue for completion. then something?'
 			sectionCount = 0;
 		}
-		else if (lesson = 2 && sectionCount >= 6) {
+		else if (lesson = 2 && sectionCount >= 0) {
 //			System.out.println("final set");
 			// -- NEW v0.1t added a setAnswer method to set which option is the answer
 			question.setText(problemToSolve.eliminationMethod());
-			setCorrectPosition(position, problemToSolve);
-		} else if (lesson = 2 && sectionCount >= 0) {
-//			System.out.println("next set");
-			question.setText(problemToSolve.dimensionOfMatrix());
 			setCorrectPosition(position, problemToSolve);
 		}
 		//Lesson 3 Logic
@@ -168,11 +164,11 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 		else if (lesson = 3 && sectionCount >= 6) {
 //			System.out.println("final set");
 			// -- NEW v0.1t added a setAnswer method to set which option is the answer
-			question.setText(problemToSolve.functionCombinerSubtract());
+			question.setText(problemToSolve.dimensionOfMatrix());
 			setCorrectPosition(position, problemToSolve);
 		} else if (lesson = 3 && sectionCount >= 0) {
 //			System.out.println("next set");
-			question.setText(problemToSolve.functionCombineMultiply());
+			question.setText(problemToSolve.positionInMatrix());
 			setCorrectPosition(position, problemToSolve);
 		}
 		//Lesson 4 Logic
@@ -183,11 +179,11 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 		else if (lesson = 4 && sectionCount >= 6) {
 //			System.out.println("final set");
 			// -- NEW v0.1t added a setAnswer method to set which option is the answer
-			question.setText(problemToSolve.functionCombinerSubtract());
+			question.setText(problemToSolve.addMatrix());
 			setCorrectPosition(position, problemToSolve);
 		} else if (lesson = 4 && sectionCount >= 0) {
 //			System.out.println("next set");
-			question.setText(problemToSolve.functionCombineMultiply());
+			question.setText(problemToSolve.subtractMatrix());
 			setCorrectPosition(position, problemToSolve);
 		}
 		//Lesson 5 Logic
@@ -198,11 +194,11 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 		else if (lesson = 5 && sectionCount >= 6) {
 //			System.out.println("final set");
 			// -- NEW v0.1t added a setAnswer method to set which option is the answer
-			question.setText(problemToSolve.functionCombinerSubtract());
+			question.setText(problemToSolve.multiplyMatrix());
 			setCorrectPosition(position, problemToSolve);
 		} else if (lesson = 5 && sectionCount >= 0) {
 //			System.out.println("next set");
-			question.setText(problemToSolve.functionCombineMultiply());
+			question.setText(problemToSolve.divideMatrix());
 			setCorrectPosition(position, problemToSolve);
 		}
 		//Lesson 6 Logic
@@ -213,11 +209,11 @@ public class AssessorPanel extends JPanel implements ActionListener, Observer {
 		else if (lesson = 6 && sectionCount >= 6) {
 //			System.out.println("final set");
 			// -- NEW v0.1t added a setAnswer method to set which option is the answer
-			question.setText(problemToSolve.functionCombinerSubtract());
+			question.setText(problemToSolve.multiplyMatrixScalar());
 			setCorrectPosition(position, problemToSolve);
 		} else if (lesson = 6 && sectionCount >= 0) {
 //			System.out.println("next set");
-			question.setText(problemToSolve.functionCombineMultiply());
+			question.setText(problemToSolve.divideMatrixScalar());
 			setCorrectPosition(position, problemToSolve);
 		}
 		else {
