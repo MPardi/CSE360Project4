@@ -1,6 +1,7 @@
 package project04;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 public class ControlCenter {
 
@@ -20,7 +21,9 @@ public class ControlCenter {
 	private int[] correctCount = new int[10];
 	private int[] incorrectCount = new int[10];
 	private float[] timeSpentPerQuestion = new float[10];
-	private float[][] timeSpentPerLessons = new float[8][];
+	private ArrayList<float[]> timeSpentPerLessons = new ArrayList<float[]>();
+	
+	private boolean lastLesson = false;
 
 	private int currentLesson;
 
@@ -46,9 +49,20 @@ public class ControlCenter {
 	}
 
 	public void newLesson() {
-		currentQuestion = 1;
-		timerSet();
+		if (currentLesson != 8) {
+			currentLesson++;
+			lastLesson = false;
+		}
+		else {
+			lastLesson = true;
+		}
 		
+		currentQuestion = 1;
+		timeSpentPerLessons.add(timeSpentPerQuestion);
+		for (int i = 0; i < timeSpentPerQuestion.length; i++) {
+			timeSpentPerQuestion[i] = (float) 0.0;
+		}
+		timerSet();
 	}
 
 	public void setCurrentLesson(int currentLesson) {

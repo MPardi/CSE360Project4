@@ -110,6 +110,7 @@ public class DescriptorPanel extends JPanel {
 
 		gbc.gridy = 3;
 		this.add(responseText, gbc);
+		responseText.setText("Answer Response: ");
 	}
 
 	public static void appendText(boolean bol) // to implement just type
@@ -124,7 +125,7 @@ public class DescriptorPanel extends JPanel {
 		if (bol == true) {
 			System.out.println("Correct\n");
 			// doc.insertString(doc.getLength(), "Correct!\n", null);
-			responseText.setText("Correct!");
+			responseText.setText("Answer Response: Correct!");
 			// mainText.append("Correct!\n");
 			correctAmount++;
 
@@ -137,7 +138,7 @@ public class DescriptorPanel extends JPanel {
 				// mainText.append("Lesson completed!\n");
 			}
 		} else
-			responseText.setText("Incorrect!");
+			responseText.setText("Answer Response: Incorrect!");
 
 		updateLabels();
 		appendCount++;
